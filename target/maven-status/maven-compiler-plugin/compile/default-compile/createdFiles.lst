@@ -1,0 +1,6 @@
+com\cg\controller\SeriesController.class
+com\cg\dao\SeriesDao.class
+com\cg\Application.class
+com\cg\model\SeriesModel.class
+com\cg\repository\SeriesRepository.class
+com\cg\service\SeriesService.class

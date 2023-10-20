@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
+
 public class SeriesModel {
 	@Id
 	private int seriesId;

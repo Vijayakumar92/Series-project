@@ -9,24 +9,25 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.cg.dao.SeriesDao;
+import com.cg.model.SeriesModel;
 import com.cg.repository.SeriesRepository;
 
 @Service
 public class SeriesService implements SeriesDao {
 
-	@Autowired
+	@Autowired   
 	private SeriesRepository srepository;
 	
-	List<Series> lseries=new ArrayList<>();
+	List<SeriesModel> lseries=new ArrayList<SeriesModel>();
 	
 	
-	public String addSeriesName(Series name) {
+	public String addSeriesName(SeriesModel name) {
 		lseries.add(name);
 		return "Series added successfully";
 		
 	}
 
-	public List<Series> getAllSerieses() {
+	public List<SeriesModel> getAllSerieses() {
 	
 		return lseries;
 	}

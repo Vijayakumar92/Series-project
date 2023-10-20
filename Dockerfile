@@ -1,6 +1,5 @@
-FROM maven:3.8.2-jdk-17
-EXPOSE 8080
-WORKDIR /46330756SeriesProject
-COPY . .
-RUN mvn clean install
-CMD mvn spring-boot:run
+FROM openjdk:17-jdk-slim
+ARG JAR_FILE=target/Series-project.jar
+WORKDIR .
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","app.jar"]
